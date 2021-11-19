@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container">
+	<h1 class="text-primary">{{ head }}</h1>
+
+<div class="row">
+{% for article in articles %}
+		<div class="col-lg-3">
+		
+		<div class="container">
+			<img src="{{ article.urlToImage }}" class="img-thumbnail" width="285" height="300" /><br>	
+		</div>
+
+		<div class="container">
+			<a href="{{ article.url }}" class="text-primary text-jusify">
+				{{ article.title }}
+			</a>
+		</div>
+
+		<div class="container">
+			<small class="text text-muted">
+			{{ article.publishedAt }}/ {{ article.source.name }}
+			</small>
+		</div>
+		<br>
+		</div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}

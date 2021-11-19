@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	{% if title %}
+
+	<title>{{ title }}</title>
+
+	{% else %}
+	<title>Roe</title>
+	{% endif %}
+	
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <a class="navbar-brand" href="#">Roe</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="{% url 'business-articles' %}">Business</a>
+      <a class="nav-item nav-link" href="{% url 'entertainment-articles' %}">Entertainment</a>
+      <a class="nav-item nav-link" href="{% url 'general-articles2' %}">General</a>
+      <a class="nav-item nav-link" href="{% url 'health-articles' %}">Health</a>
+      <a class="nav-item nav-link" href="{% url 'science-articles' %}">Science</a>
+      <a class="nav-item nav-link" href="{% url 'sports-articles' %}">Sports</a>
+      <a class="nav-item nav-link" href="{% url 'technology-articles' %}">Technology</a>
+      
+      <form method="get" action="search">
+      	<div class="input-group">
+	      <input type="text" class="form-control" placeholder="search..." name="query">
+	      <div class="input-group-btn">
+	        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+	      </div>
+	    </div>
+  	  </form>
+
+      
+    </div>
+  </div>
+</nav>
+	{% block content %}
+	
+	{% endblock %}
+
+<div class="container" align="center">
+	
+<footer class="container">
+	<h4 class="text-justify text-center"><b>Social Media and Contacts</b></h4>
+	
+	<a href="https://twitter.com/Nandalal7896" class="btn btn-link">
+		<h2><span class="fa fa-twitter"></span></h2>
+	</a>
+	
+	<a href="https://www.instagram.com/coding_vs_programming/" class="btn btn-link">
+		<h2><span class="fa fa-instagram"></span></h2>
+	</a>
+
+	<a href=" https://github.com/NaNdalal-dev" class="btn btn-link">
+		<h2><span class="fa fa-github"></span></h2>
+	</a>
+
+	<a href="https://www.youtube.com/channel/UCa7WJu7_ztmDhA0YeBQzrpg" class="btn btn-link">
+		<h2><span class="fa fa-youtube"></span></h2>
+	</a>
+	
+	<a href=" https://www.linkedin.com/in/nandalala-dintakurthi-6327ba195/" class="btn btn-link">
+		<h2><span class="fa fa-linkedin"></span></h2>
+	</a>
+	<a href="mailto:nd90981@gmail.com" class="btn btn-link">
+		<h2><span class="fa fa-envelope"></span></h2>
+	</a>
+
+</footer>	
+</div>
+</div>
+</body>
+
+</html>
